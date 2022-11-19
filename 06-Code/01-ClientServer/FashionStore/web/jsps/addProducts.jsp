@@ -19,7 +19,7 @@
             <h1 class="text-center">
                 Agregar Producto
             </h1>
-            <form action="../Controller">
+            <form action="Controller">
                 <div class="row mt-4">
                     <div class="col">
                         <label>Nombre </label>

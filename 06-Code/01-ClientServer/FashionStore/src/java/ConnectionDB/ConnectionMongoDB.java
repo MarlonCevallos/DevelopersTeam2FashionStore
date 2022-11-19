@@ -3,14 +3,17 @@ package ConnectionDB;
 import Model.MongoDB;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
+import com.mongodb.MongoException;
 import com.mongodb.MongoSecurityException;
+import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoDatabase;
 /**
  *
  * @author bryan
  */
 public class ConnectionMongoDB {
-        MongoDB mongoDB = new MongoDB();
+    //CONEXION FUNCIONA  
+    /* MongoDB mongoDB = new MongoDB();
         public static MongoDatabase database;
         
         public MongoDatabase connect (){
@@ -31,5 +34,18 @@ public class ConnectionMongoDB {
         public void ConnectionMongo(){
         ConnectionMongoDB mongoDBConnection = new ConnectionMongoDB()  ;   
         database = mongoDBConnection.connect(); 
+        }*/
+     private com.mongodb.client.MongoClient mongoClient = null;
+    public ConnectionMongoDB() {
+        try {
+            String uri = "mongodb+srv://MarlonTeam2:2022@cluster0.pvig5s9.mongodb.net/test";
+            mongoClient = MongoClients.create(uri);
+        }catch (MongoException e) {
+            System.out.println(e);
         }
+    }
+    
+    public MongoDatabase getMongoDatabase() {
+        return mongoClient.getDatabase("FashionStoreDB");
+    }
 }

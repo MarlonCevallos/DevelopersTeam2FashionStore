@@ -9,7 +9,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import org.bson.Document;
+
 
 /**
  *
@@ -18,9 +18,10 @@ import org.bson.Document;
 public class Controller extends HttpServlet {
     String addProduct = "jsps/addProducts.jsp";
     String updateProduct = "jsps/updateProducts.jsp";
+    String listProduct = "jsps/listProducts.jsp";
     Product product = new Product();
     ProductDAO productDAO = new ProductDAO();
-    int id;
+    String pro;
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -50,7 +51,21 @@ public class Controller extends HttpServlet {
             }
             break;
             case "Agregar":{
+                String name = request.getParameter("name");
+                String description = request.getParameter("description");
+                int quantity = Integer.parseInt(request.getParameter("quantity"));
+                double price = Double.parseDouble(request.getParameter("price"));
+                double profit =  productDAO.calculateProfits(quantity, price);
+                //String category = request.getParameter("category");
                 
+                product.setName(name);
+                product.setDescription(description);
+                product.setQuantity(quantity);
+                product.setPrice(price);
+                product.setProfit(profit);
+                productDAO.addProduct(product);
+
+                access = listProduct;
                }
             break;
             
@@ -60,7 +75,7 @@ public class Controller extends HttpServlet {
             }
             break;
             case "Actualizar":{
-                    id = Integer.parseInt(request.getParameter("idProduct")); //no cambiar idProduct update productp jsp 
+                    /*id = Integer.parseInt(request.getParameter("idProduct")); //no cambiar idProduct update productp jsp 
                     String name = request.getParameter("name");
                     float price = Float.parseFloat(request.getParameter("price"));
                     int quantity = Integer.parseInt(request.getParameter("quantity"));
@@ -70,11 +85,13 @@ public class Controller extends HttpServlet {
                     product.setPrice(price);
                     product.setQuantity(quantity);
                     product.setProfit(profit);
-                    productDAO.updateProduct(product);
+                    productDAO.updateProduct(product);*/
             }
             break;
             case "deleteProduct":{
-                
+              /* pro = request.getParameter("name");
+               product.setName(pro);
+               productDAO.deleteProduct(pro);*/
                
             }
             break;

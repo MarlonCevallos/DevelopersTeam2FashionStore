@@ -27,7 +27,7 @@
             <table class="table table-info mt-4">
                 <thead>
                     <tr>
-                        <th class="text-center">ID</th>
+                        <!--<th class="text-center">ID</th>-->
                         <th class="text-center">NOMBRE</th>
                         <th class="text-center">DESCRIPCIÓN</th>
                         <th class="text-center">PRECIO</th>
@@ -48,9 +48,9 @@
                 %>
                 <tbody>
                     <tr>
-                        <td class="text-center">
+                        <!--<td class="text-center">
                              <%= product.getId()%> 
-                        </td>
+                        </td>-->
                         <td class="text-center">
                              <%= product.getName()%> 
                         </td>
@@ -75,7 +75,7 @@
                            
                         </td>
                         <td class="text-center">
-                              <a href="../Controller?accion=deleteProduct&identificador=<%= product.getId()%>">
+                              <a href="../Controller?accion=deleteProduct&nombre=<%= product.getName()%>">
                                 <button class="btn btn-danger">
                                     Eliminar
                                 </button>
