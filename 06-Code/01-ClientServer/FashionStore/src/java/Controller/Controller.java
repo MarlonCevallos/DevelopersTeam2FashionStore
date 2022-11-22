@@ -1,7 +1,11 @@
 package Controller;
 
+import ConnectionDB.ConnectionMongoDB;
 import Model.Product;
 import ModelDAO.ProductDAO;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.model.Filters;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -19,9 +23,9 @@ public class Controller extends HttpServlet {
     String addProduct = "jsps/addProducts.jsp";
     String updateProduct = "jsps/updateProducts.jsp";
     String listProduct = "jsps/listProducts.jsp";
+    String outProduct = "index.jsp";
     Product product = new Product();
     ProductDAO productDAO = new ProductDAO();
-    String pro;
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -51,12 +55,12 @@ public class Controller extends HttpServlet {
             }
             break;
             case "Agregar":{
+                
                 String name = request.getParameter("name");
                 String description = request.getParameter("description");
                 int quantity = Integer.parseInt(request.getParameter("quantity"));
                 double price = Double.parseDouble(request.getParameter("price"));
                 double profit =  productDAO.calculateProfits(quantity, price);
-                //String category = request.getParameter("category");
                 
                 product.setName(name);
                 product.setDescription(description);
@@ -64,7 +68,6 @@ public class Controller extends HttpServlet {
                 product.setPrice(price);
                 product.setProfit(profit);
                 productDAO.addProduct(product);
-
                 access = listProduct;
                }
             break;
@@ -75,27 +78,20 @@ public class Controller extends HttpServlet {
             }
             break;
             case "Actualizar":{
-                    /*id = Integer.parseInt(request.getParameter("idProduct")); //no cambiar idProduct update productp jsp 
-                    String name = request.getParameter("name");
-                    float price = Float.parseFloat(request.getParameter("price"));
-                    int quantity = Integer.parseInt(request.getParameter("quantity"));
-                    double profit = productDAO.calculateProfits(quantity, price);
-                    product.setId(id);
-                    product.setName(name);
-                    product.setPrice(price);
-                    product.setQuantity(quantity);
-                    product.setProfit(profit);
-                    productDAO.updateProduct(product);*/
             }
             break;
             case "deleteProduct":{
-              /* pro = request.getParameter("name");
-               product.setName(pro);
-               productDAO.deleteProduct(pro);*/
-               
+              ConnectionMongoDB connectionMongoDB = new ConnectionMongoDB();
+              MongoDatabase mongoDatabase;
+              mongoDatabase = connectionMongoDB.getMongoDatabase();
+              MongoCollection collection = mongoDatabase.getCollection("Products");
+              collection.deleteOne(Filters.eq("_id", "63792c953e0b53695bdd673c"));
+              access = listProduct;
             }
             break;
+            
             }
+        
         RequestDispatcher view = request.getRequestDispatcher(access);
         view.forward(request, response);
     }

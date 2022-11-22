@@ -16,7 +16,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" 
               rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" 
               crossorigin="anonymous">
-        <title>JSP Page</title>
+        <title>Lista</title>
         
     </head>
     <body>
@@ -67,7 +67,7 @@
                              <%= product.getProfit()%> 
                         </td>
                         <td class="text-center">
-                            <a href="../Controller?accion=updateProduct&identificador=<%= product.getId()%>">
+                            <a href="../Controller?accion=updateProduct&id=<%= product.getId()%>">
                                 <button class="btn btn-primary">
                                     Editar
                                 </button>
@@ -75,7 +75,7 @@
                            
                         </td>
                         <td class="text-center">
-                              <a href="../Controller?accion=deleteProduct&nombre=<%= product.getName()%>">
+                              <a href="../Controller?accion=deleteProduct">
                                 <button class="btn btn-danger">
                                     Eliminar
                                 </button>
@@ -89,7 +89,11 @@
                     <button class="btn btn-success">
                         Agregar
                     </button>
+                    </a>
+                <a href="index.jsp">
+                    <button type="submit" class="btn btn-primary">
+                             Salir
+                    </button>
                 </a>
-
     </body>
 </html>
