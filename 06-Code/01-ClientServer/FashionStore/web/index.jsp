@@ -22,25 +22,22 @@
             </h1>
              <table align="center">
                 
-  <tr> 
-    <td><img src="img/logo.jpg" alt=""/></td>
-    <td>
-        <button type="submit" id="AgregarProducto" class="button">     
+            <tr> 
+             <td><img src="img/logo.jpg" alt=""/></td>
+             <td>
+             <button type="submit" id="AgregarProducto" class="button">     
                  <a class="text" href="jsps/listProducts.jsp">PRODUCTOS</a>
              </button>
-            <br>
-            <br>
+             <br>
+             <br>
              <button class="button" type="submit" id="AgregarProveedor">     
              <a class="text" href="jsps/listProviders.jsp">PROVEEDORES</a>
              </button>
-    </td>
+            </td>
              <td></td>
-  </tr>
-  <hr size=10 color="#B60DCC">
-</table>
+            </tr>
+            <hr size=10 color="#B60DCC">
+         </table>
          </div>
-        
-       
-    </body>
-    
+    </body> 
 </html>
