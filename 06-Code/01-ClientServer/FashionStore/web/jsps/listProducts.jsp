@@ -90,7 +90,7 @@
                         Agregar
                     </button>
                     </a>
-                <a href="index.jsp">
+                <a href="../Controller?accion=index">
                     <button type="submit" class="btn btn-primary">
                              Salir
                     </button>

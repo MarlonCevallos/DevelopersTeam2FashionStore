@@ -20,6 +20,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author bryan
  */
 public class Controller extends HttpServlet {
+    String exit = "jsps/index.jsp";
     String addProduct = "jsps/addProducts.jsp";
     String updateProduct = "jsps/updateProducts.jsp";
     String listProduct = "jsps/listProducts.jsp";
@@ -41,19 +42,20 @@ public class Controller extends HttpServlet {
             out.println("</body>");
             out.println("</html>");
         }
-    }
+    }  
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String access = "";
-        String acction = request.getParameter("accion");
-        switch(acction){
+        String acction = request.getParameter("accion");    
+        switch(acction){        
             case "addProducts":{
                access = addProduct;
                
             }
             break;
+          
             case "Agregar":{
                 
                 String name = request.getParameter("name");
@@ -90,8 +92,12 @@ public class Controller extends HttpServlet {
             }
             break;
             
+            case "exit":{
+                    access = exit;
+                }
+                break;
             }
-        
+    
         RequestDispatcher view = request.getRequestDispatcher(access);
         view.forward(request, response);
     }
