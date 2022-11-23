@@ -39,8 +39,6 @@
   <hr size=10 color="#B60DCC">
 </table>
          </div>
-        
-       
     </body>
     
 </html>

@@ -49,7 +49,6 @@ public class Product {
     }
 
     public double getTotalProfit() {
-         //totalProfit = totalProfit + Math.round(profit*100)/100.0;
         return totalProfit;
     }
 

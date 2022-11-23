@@ -120,6 +120,5 @@ public class ProductDAO  implements ProductCrud{
         double Sale = 10;
         Sale = Sale + price;
         return Sale;
-        
     }
 }
