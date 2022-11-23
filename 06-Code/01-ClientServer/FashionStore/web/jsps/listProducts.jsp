@@ -24,6 +24,7 @@
             <h1 class="text-center mt-4">
                 Lista de Productos
             </h1>
+           
             <table class="table table-info mt-4">
                 <thead>
                     <tr>
@@ -75,7 +76,7 @@
                            
                         </td>
                         <td class="text-center">
-                              <a href="../Controller?accion=deleteProduct">
+                              <a href="../Controller?accion=deleteProduct&id=<%= product.getId()%>">
                                 <button class="btn btn-danger">
                                     Eliminar
                                 </button>
@@ -85,12 +86,38 @@
                     <%}%>
                 </tbody>
             </table>
+                 <table class="table table-info mt-4">
+                 <thead>
+                    <tr>
+                        <th class="text-center">NÚMERO DE VENTAS</th>
+                        <th class="text-center">TOTAL DE VENTAS</th>
+                        <th class="text-center">PRODUCTOS VENDIDOS</th>
+                        <th class="text-center">TOTAL GANANCIAS</th>
+                    </tr>
+                 </thead>
+                 <tbody>
+                    <tr>
+                        <td class="text-center">
+                             <%= product.getNumberSales()%> 
+                        </td>
+                         <td class="text-center">
+                             <%= product.getTotalSales()%> 
+                        </td>
+                        <td class="text-center">
+                             <%= product.getProductSales()%> 
+                        </td>
+                         <td class="text-center">
+                             <%= product.getTotalProfit()%> 
+                        </td>
+                    </tr>
+                 </tbody>
+            </table>
                 <a href="../Controller?accion=addProducts">
                     <button class="btn btn-success">
                         Agregar
                     </button>
                     </a>
-                <a href="index.jsp">
+                <a href="../index.jsp">
                     <button type="submit" class="btn btn-primary">
                              Salir
                     </button>

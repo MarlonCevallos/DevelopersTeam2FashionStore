@@ -20,13 +20,13 @@
         <div class="container mt-4">
             <%
                 ProductDAO productDAO = new ProductDAO();
-                int id = Integer.parseInt((String)request.getAttribute("identificador"));
+                int id = Integer.parseInt((String)request.getAttribute("id"));
                 Product product = (Product) productDAO.listProduct(id);
             %>
             <h1 class="text-center mt-4">
                 Modificar un producto
             </h1>
-            <form action="../Controller">
+            <form action="Controller">
                 <div>
                     <input type="hidden" name="idProduct" value="<%= product.getId()%>">
                     <input type="hidden" name="profit" value="<%= product.getProfit()%>">

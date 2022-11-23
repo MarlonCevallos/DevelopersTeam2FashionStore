@@ -12,7 +12,9 @@ public interface ProductCrud {
     public Product listProduct (int id); // unico product
     public boolean addProduct(Product product);
     public boolean updateProduct(Product product); // recibe un producto de tipo producto
-    public boolean deleteProduct(String nombre);
+    public boolean deleteProduct(int id);
     //REGLA DE NEGOCIO
     public double calculateProfits(int quantity, double price);
+    public double calculateTotalSales(double price);
+    
 }

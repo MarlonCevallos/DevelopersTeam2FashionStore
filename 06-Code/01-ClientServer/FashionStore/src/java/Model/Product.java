@@ -11,6 +11,51 @@ public class Product {
     private double price;
     private int quantity;
     private double profit;
+    private int numberSales;
+    private int productSales;
+    private double totalSales;
+    private double totalProfit;
+
+    public int getProductSales() {
+        return productSales;
+    }
+
+    public void setProductSales(int productSales) {
+        this.productSales = productSales;
+    }
+    
+
+    public double getTotalSales() {
+        return totalSales;
+    }
+
+    public void setTotalSales(double totalSales) {
+        this.totalSales = totalSales;
+    }
+
+    public int getNumberSales() {
+        return numberSales;
+    }
+
+    public void setNumberSales(int numberSales) {
+        this.numberSales = numberSales;
+    }
+
+    public Product(int numberSales, int productSales, double totalSales, double totalProfit) {
+        this.numberSales = numberSales;
+        this.productSales = productSales;
+        this.totalSales = totalSales;
+        this.totalProfit = totalProfit;
+    }
+
+    public double getTotalProfit() {
+         //totalProfit = totalProfit + Math.round(profit*100)/100.0;
+        return totalProfit;
+    }
+
+    public void setTotalProfit(double totalProfit) {
+        this.totalProfit = totalProfit;
+    }
 
     public int getId() {
         return id;
@@ -60,7 +105,7 @@ public class Product {
     public void setProfit(double profit) {
         this.profit = profit;
     }
-
+    
     public Product(int id, String name, String description, double price, int quantity, double profit) {
         this.id = id;
         this.name = name;

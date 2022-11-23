@@ -22,28 +22,33 @@
             <form action="Controller">
                 <div class="row mt-4">
                     <div class="col">
+                        <label>Id </label>
+                        <input type="text" name="id" class="form-control">
+                    </div>
+                    <div class="col">
                         <label>Nombre </label>
                         <input type="text" name="name" class="form-control">
-                </div>
+                    </div>
                       <div class="col">
                         <label>Descripción </label>
                         <input type="text" name="description" class="form-control">
-                </div>
+                    </div>
                      <div class="col">
                         <label>Precio </label>
                         <input type="text" name="price" class="form-control">
-                </div>
+                    </div>
                      <div class="col">
                         <label>Cantidad </label>
                         <input type="number" name="quantity" class="form-control">
-                </div>
+                    </div>
                      <div class="row mt-4">
                          <div class="col">
+                            
                          <button type="submit" value="Agregar" name="accion" class="btn btn-success">
                              Agregar
                          </button>
                           </div>
-                </div>
+                    </div>
                     </div>
             </form>
     </body>
