@@ -34,7 +34,7 @@
                         <th class="text-center">PRECIO</th>
                         <th class="text-center">CANTIDAD</th>
                         <th class="text-center">GANANCIAS</th>
-                        <th class="text-center">EDITAR</th>
+                        <!--<th class="text-center">EDITAR</th>-->
                         <th class="text-center">ELIMINAR</th>
                     </tr>
                 </thead>
@@ -67,14 +67,14 @@
                         <td class="text-center">
                              <%= product.getProfit()%> 
                         </td>
-                        <td class="text-center">
+                        <!--<td class="text-center">
                             <a href="../Controller?accion=updateProduct&id=<%= product.getId()%>">
                                 <button class="btn btn-primary">
                                     Editar
                                 </button>
                             </a>
                            
-                        </td>
+                        </td>-->
                         <td class="text-center">
                               <a href="../Controller?accion=deleteProduct&id=<%= product.getId()%>">
                                 <button class="btn btn-danger">
@@ -85,7 +85,11 @@
                     </tr>
                     <%}%>
                 </tbody>
+            
             </table>
+                 <h1 class="text-center mt-4">
+                REPORTE DE VENTAS
+            </h1>
                  <table class="table table-info mt-4">
                  <thead>
                     <tr>
