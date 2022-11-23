@@ -95,8 +95,23 @@ public class ProductDAO  implements ProductCrud{
 
     @Override
     public boolean updateProduct(Product product) {
+        String query = "UPDATE productos SET name='"
+                + product.getName() + "', description ='"
+                + product.getDescription()+ "',price  ='"
+                + product.getPrice()+ "',quantity  ='"
+                + product.getQuantity()+ "',profile  ="
+                +product.getProfit() + "',WHERE id   =" +product.getId();
+             try {
+            mongoDatabase = connectionMongoDB.getMongoDatabase();
+            MongoCollection collection = mongoDatabase.getCollection("Products");
+            collection.insertOne(Document.parse(query));
+        } catch (MongoException e) {
+            System.out.println("Error" + e);
+        }
         return false;
     }
+
+    
     @Override
     public boolean deleteProduct(int id) {
         
