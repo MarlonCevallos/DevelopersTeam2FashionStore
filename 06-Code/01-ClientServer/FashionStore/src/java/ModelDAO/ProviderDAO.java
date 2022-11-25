@@ -8,7 +8,6 @@ import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
-import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 import org.bson.Document;
@@ -20,7 +19,6 @@ import org.bson.Document;
 public class ProviderDAO implements ProviderCrud{
     ConnectionMongoDB connectionMongoDB = new ConnectionMongoDB();
     MongoDatabase mongoDatabase;
-    ResultSet resultSet;
     Provider provider;
     
     @Override

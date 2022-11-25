@@ -50,7 +50,7 @@ public class Controller1 extends HttpServlet {
                 }
                 break;
                 
-                case "Agregar1":{
+                case "Add":{
                     String name = request.getParameter("name");
                     String identify = request.getParameter("identify");
                     String direction = request.getParameter("direction");
@@ -66,7 +66,7 @@ public class Controller1 extends HttpServlet {
                 break;
                 
                 case "updateProvider":{
-                    request.setAttribute("identificador", request.getParameter("identificador"));
+                    request.setAttribute("identifier", request.getParameter("identifier"));
                     access = updateProvider;
                 }
                 break;

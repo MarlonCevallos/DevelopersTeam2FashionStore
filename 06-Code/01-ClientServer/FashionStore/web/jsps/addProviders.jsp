@@ -14,8 +14,8 @@
         <title>Add Provider</title>
     <body>
         <div class="container mt-4">
-            <h1 class="text-center">
-                Agregar Proveedor
+            <h1 class="text-center mt-4">
+                Registrar Proveedor
             </h1>
             <form action="Controller1">
                 <div class="row mt-4">
@@ -38,9 +38,9 @@
                 </div>
                 <div class="row mt-4">
                     <div class="col">
-                        <button type="submit" value="Agregar1" name="accion1" class="btn btn-success">
+                         <button type="submit" value="Add" name="accion1" class="btn btn-success">
                             Agregar
-                        </button>
+                         </button>
                     </div>    
                 </div>
             </form>

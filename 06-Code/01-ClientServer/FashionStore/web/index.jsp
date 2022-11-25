@@ -30,7 +30,7 @@
              </button>
              <br>
              <br>
-             <button class="button" type="submit" id="AgregarProveedor">     
+             <button class="button" type="submit" id="Providers">     
              <a class="text" href="jsps/listProviders.jsp">PROVEEDORES</a>
              </button>
             </td>

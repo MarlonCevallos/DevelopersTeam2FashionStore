@@ -21,7 +21,7 @@
     <body>
         <div class="container mt-4">
             <h1 class="text-center mt-4">
-                Registrar Proveedor
+                Proveedores
             </h1>
             <table class="table table-info mt-4">
                 <thead>
@@ -43,16 +43,16 @@
                 <tbody>
                     <tr>
                         <td class="text-center">
-                             <%= provider.getName()%> 
+                            <%= provider.getName()%> 
                         </td>
                         <td class="text-center">
-                             <%= provider.getIdentify()%> 
+                            <%= provider.getIdentify()%> 
                         </td>
                         <td class="text-center">
-                             <%= provider.getDirection()%> 
+                            <%= provider.getDirection()%> 
                         </td>
                         <td class="text-center">
-                             <%= provider.getPhone()%> 
+                            <%= provider.getPhone()%> 
                         </td>
                     </tr>
                     <%}%>
