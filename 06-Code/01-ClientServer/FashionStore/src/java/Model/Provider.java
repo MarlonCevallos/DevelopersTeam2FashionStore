@@ -5,6 +5,7 @@ package Model;
  * @author micha
  */
 public class Provider {
+
     private String name;
     private String identify;
     private String direction;
@@ -19,7 +20,7 @@ public class Provider {
         this.direction = direction;
         this.phone = phone;
     }
-    
+
     public String getName() {
         return name;
     }
@@ -51,5 +52,5 @@ public class Provider {
     public void setPhone(String phone) {
         this.phone = phone;
     }
-    
+
 }

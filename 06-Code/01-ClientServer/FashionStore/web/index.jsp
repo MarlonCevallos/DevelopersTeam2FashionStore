@@ -16,28 +16,28 @@
         <title>Fashion-Store</title>
     </head>
     <body>
-         <div>
-              <h1 class="text-center mt-4">
+        <div>
+            <h1 class="text-center mt-4">
                 TIENDA DE MODA
             </h1>
-             <table align="center">
-                
-            <tr> 
-             <td><img src="img/logo.jpg" alt=""/></td>
-             <td>
-             <button type="submit" id="AgregarProducto" class="button">     
-                 <a class="text" href="jsps/listProducts.jsp">PRODUCTOS</a>
-             </button>
-             <br>
-             <br>
-             <button class="button" type="submit" id="Providers">     
-             <a class="text" href="jsps/listProviders.jsp">PROVEEDORES</a>
-             </button>
-            </td>
-             <td></td>
-            </tr>
-            <hr size=10 color="#B60DCC">
-         </table>
-         </div>
+            <table align="center">
+
+                <tr> 
+                    <td><img src="img/logo.jpg" alt=""/></td>
+                    <td>
+                        <button type="submit" id="AgregarProducto" class="button">     
+                            <a class="text" href="jsps/listProducts.jsp">PRODUCTOS</a>
+                        </button>
+                        <br>
+                        <br>
+                        <button class="button" type="submit" id="Providers">     
+                            <a class="text" href="jsps/listProviders.jsp">PROVEEDORES</a>
+                        </button>
+                    </td>
+                    <td></td>
+                </tr>
+                <hr size=10 color="#B60DCC">
+            </table>
+        </div>
     </body> 
 </html>

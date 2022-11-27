@@ -16,11 +16,12 @@ import org.bson.Document;
  *
  * @author micha
  */
-public class ProviderDAO implements ProviderCrud{
+public class ProviderDAO implements ProviderCrud {
+
     ConnectionMongoDB connectionMongoDB = new ConnectionMongoDB();
     MongoDatabase mongoDatabase;
     Provider provider;
-    
+
     @Override
     public List listProviders() {
         ArrayList<Provider> providerList = new ArrayList<>();
@@ -53,12 +54,12 @@ public class ProviderDAO implements ProviderCrud{
     @Override
     public boolean addProvider(Provider provider) {
         String query = "{"
-                + "name: " +"'"+ provider.getName() + "'"+","
-                + "identify: " +"'"+ provider.getIdentify()+ "'"+","
-                + "direction: " +"'"+ provider.getDirection() +"'"+","
-                + "phone: " +"'"+ provider.getPhone() +"'"+","
+                + "name: " + "'" + provider.getName() + "'" + ","
+                + "identify: " + "'" + provider.getIdentify() + "'" + ","
+                + "direction: " + "'" + provider.getDirection() + "'" + ","
+                + "phone: " + "'" + provider.getPhone() + "'" + ","
                 + "}";
-       try {
+        try {
             mongoDatabase = connectionMongoDB.getMongoDatabase();
             MongoCollection collection = mongoDatabase.getCollection("Provider");
             collection.insertOne(Document.parse(query));
@@ -77,5 +78,5 @@ public class ProviderDAO implements ProviderCrud{
     public boolean deleteProvider(String identify) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
-    
+
 }

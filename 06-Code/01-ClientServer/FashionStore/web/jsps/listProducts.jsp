@@ -49,9 +49,6 @@
                 %>
                 <tbody>
                     <tr>
-                        <!--<td class="text-center">
-                             <%= product.getId()%> 
-                        </td>-->
                         <td class="text-center">
                              <%= product.getName()%> 
                         </td>
@@ -67,14 +64,6 @@
                         <td class="text-center">
                              <%= product.getProfit()%> 
                         </td>
-                        <!--<td class="text-center">
-                            <a href="../Controller?accion=updateProduct&id=<%= product.getId()%>">
-                                <button class="btn btn-primary">
-                                    Editar
-                                </button>
-                            </a>
-                           
-                        </td>-->
                         <td class="text-center">
                               <a href="../Controller?accion=deleteProduct&id=<%= product.getId()%>">
                                 <button class="btn btn-danger">

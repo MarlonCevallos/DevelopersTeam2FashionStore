@@ -11,7 +11,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" 
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" 
               rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" 
               crossorigin="anonymous">
         <title>Actualización de productos</title>
@@ -20,7 +20,7 @@
         <div class="container mt-4">
             <%
                 ProductDAO productDAO = new ProductDAO();
-                int id = Integer.parseInt((String)request.getAttribute("id"));
+                int id = Integer.parseInt((String) request.getAttribute("id"));
                 Product product = (Product) productDAO.listProduct(id);
             %>
             <h1 class="text-center mt-4">
@@ -35,27 +35,27 @@
                     <div class="col">
                         <label>Nombre </label> 
                         <input type="text" name="name" value="<%= product.getName()%>" class="form-control">
-                </div>
+                    </div>
                     <div class="col">
                         <label>Precio </label>
                         <input type="text" name="price" value="<%= product.getPrice()%>" class="form-control">
-                </div>
-                     <div class="col">
+                    </div>
+                    <div class="col">
                         <label>Cantidad </label>
                         <input type="number" name="quantity" value="<%= product.getQuantity()%>" class="form-control">
-                </div>
-                 <div class="col">
+                    </div>
+                    <div class="col">
                         <label>Ganancias </label>
                         <input type="text" name="profit" value="<%= product.getProfit()%>" readonly class="form-control">
+                    </div>
                 </div>
-                </div>
-                
+
                 <div class="row mt-4">
-                     <div class="col">
-                         <button type="submit" value="Actualizar" name="accion" class="btn btn-primary">
-                             Confirmar
-                         </button>
-                </div>
+                    <div class="col">
+                        <button type="submit" value="Actualizar" name="accion" class="btn btn-primary">
+                            Confirmar
+                        </button>
+                    </div>
                 </div>
             </form>
         </div>

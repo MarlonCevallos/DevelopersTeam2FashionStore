@@ -37,8 +37,8 @@
                     List<Provider> list = providerDAO.listProviders();
                     Iterator<Provider> iterator = list.iterator();
                     Provider provider = null;
-                    while(iterator.hasNext()){
-                        provider = iterator.next();   
+                    while (iterator.hasNext()) {
+                        provider = iterator.next();
                 %>
                 <tbody>
                     <tr>

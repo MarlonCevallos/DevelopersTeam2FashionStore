@@ -18,15 +18,16 @@ import org.bson.Document;
  *
  * @author bryan
  */
-public class ProductDAO  implements ProductCrud{
-   
+public class ProductDAO implements ProductCrud {
+
     ConnectionMongoDB connectionMongoDB = new ConnectionMongoDB();
     MongoDatabase mongoDatabase;
     ResultSet resultSet;
     Product product;
+
     @Override
     public List listProducts() {
-         ArrayList<Product> productList = new ArrayList<>();
+        ArrayList<Product> productList = new ArrayList<>();
 
         try {
             mongoDatabase = connectionMongoDB.getMongoDatabase();
@@ -47,7 +48,7 @@ public class ProductDAO  implements ProductCrud{
                 addSales = addSales + price;
                 double profit = docObject.getDouble("profit");
                 totalProfits = totalProfits + profit;
-                totalProfits = Math.round(totalProfits*100)/100.0;
+                totalProfits = Math.round(totalProfits * 100) / 100.0;
                 product.setId(docObject.getInteger("id"));
                 product.setName(docObject.getString("name"));
                 product.setDescription(docObject.getString("description"));
@@ -58,9 +59,9 @@ public class ProductDAO  implements ProductCrud{
                 product.setProductSales(productSales);
                 product.setTotalSales(addSales);
                 product.setTotalProfit(totalProfits);
-                
+
                 productList.add(product);
-                
+
             }
         } catch (MongoException e) {
             System.out.println("Error" + e);
@@ -68,6 +69,7 @@ public class ProductDAO  implements ProductCrud{
 
         return productList;
     }
+
     @Override
     public Product listProduct(int id) {
         return product;
@@ -76,14 +78,14 @@ public class ProductDAO  implements ProductCrud{
     @Override
     public boolean addProduct(Product product) {
         String query = "{"
-                + "id: " + product.getId()+","
-                + "name: " +"'"+ product.getName() + "'"+","
-                + "description: " +"'"+ product.getDescription()+ "'"+","
-                + "quantity: " + product.getQuantity() +","
-                + "price: " + product.getPrice() +","
-                + "profit: " + product.getProfit()+","
+                + "id: " + product.getId() + ","
+                + "name: " + "'" + product.getName() + "'" + ","
+                + "description: " + "'" + product.getDescription() + "'" + ","
+                + "quantity: " + product.getQuantity() + ","
+                + "price: " + product.getPrice() + ","
+                + "profit: " + product.getProfit() + ","
                 + "}";
-       try {
+        try {
             mongoDatabase = connectionMongoDB.getMongoDatabase();
             MongoCollection collection = mongoDatabase.getCollection("Products");
             collection.insertOne(Document.parse(query));
@@ -97,11 +99,11 @@ public class ProductDAO  implements ProductCrud{
     public boolean updateProduct(Product product) {
         String query = "UPDATE productos SET name='"
                 + product.getName() + "', description ='"
-                + product.getDescription()+ "',price  ='"
-                + product.getPrice()+ "',quantity  ='"
-                + product.getQuantity()+ "',profile  ="
-                +product.getProfit() + "',WHERE id   =" +product.getId();
-             try {
+                + product.getDescription() + "',price  ='"
+                + product.getPrice() + "',quantity  ='"
+                + product.getQuantity() + "',profile  ="
+                + product.getProfit() + "',WHERE id   =" + product.getId();
+        try {
             mongoDatabase = connectionMongoDB.getMongoDatabase();
             MongoCollection collection = mongoDatabase.getCollection("Products");
             collection.insertOne(Document.parse(query));
@@ -111,16 +113,16 @@ public class ProductDAO  implements ProductCrud{
         return false;
     }
 
-    
     @Override
     public boolean deleteProduct(int id) {
-        
-            mongoDatabase = connectionMongoDB.getMongoDatabase();
-            MongoCollection collection = mongoDatabase.getCollection("Products");
-            collection.deleteOne(Filters.eq("id", id));
-        
-           return false;
+
+        mongoDatabase = connectionMongoDB.getMongoDatabase();
+        MongoCollection collection = mongoDatabase.getCollection("Products");
+        collection.deleteOne(Filters.eq("id", id));
+
+        return false;
     }
+
     //regla de negocio
     @Override
     public double calculateProfits(int quantity, double price) {
