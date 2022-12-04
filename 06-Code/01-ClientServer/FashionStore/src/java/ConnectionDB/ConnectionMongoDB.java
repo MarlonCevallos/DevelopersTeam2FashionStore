@@ -14,7 +14,7 @@ public class ConnectionMongoDB {
 
     public ConnectionMongoDB() {
         try {
-            String uri = "mongodb+srv://MarlonTeam2:2022@cluster0.pvig5s9.mongodb.net/test";
+            String uri = "mongodb+srv://MarlonTeam2:2022@cluster0.pvig5s9.mongodb.net/?retryWrites=true&w=majority";
             mongoClient = MongoClients.create(uri);
         } catch (MongoException e) {
             System.out.println(e);
