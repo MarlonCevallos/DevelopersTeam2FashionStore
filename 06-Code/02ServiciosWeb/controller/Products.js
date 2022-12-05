@@ -26,4 +26,16 @@ const getProducts = (req, res) => {
 }
 
 
+//PUT
+const updateProfit = (req, res) => {
+    try{
+        Product.findOneAndUpdate({id: req.body.id}, {profit: req.body.profit}, (err, prod) =>{
+            err && res.status(500).send(err.message)
+            res.status(200).send(prod)
+        })
+    }catch(error){
+        res.status(404).send({Error: "Ciente no encontrado"})
+    }
+}
+module.exports = {createProduct, getProducts, updateProfit}
 
