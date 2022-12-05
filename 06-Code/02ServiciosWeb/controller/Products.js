@@ -1,7 +1,7 @@
 const Product = require("../model/Product") // importamos nuestro modelo
 //POST
 const createProduct = (req, res) => {
-    let Products = new Product({//objeto
+    let product = new Product({//objeto
         id: req.body.id,
         name: req.body.name,
         description: req.body.description,
@@ -10,7 +10,7 @@ const createProduct = (req, res) => {
         profit: req.body.profit
     })
 
-    Products.save((err, prod) => {
+    product.save((err, prod) => {
     err && res.status(500).json(err.message)
     res.status(200).json(prod) 
     })
@@ -37,5 +37,14 @@ const updateProfit = (req, res) => {
         res.status(404).send({Error: "Ciente no encontrado"})
     }
 }
-module.exports = {createProduct, getProducts, updateProfit}
 
+
+//DELETE
+const deleteProduct = (req, res) =>{
+    Product.findOneAndDelete({id: req.body.id}, (err, prod) =>{
+        err && res.status(500).send(err.message)
+        res.status(200).send(prod)
+    })
+}
+
+module.exports = {createProduct, getProducts, updateProfit, deleteProduct}
