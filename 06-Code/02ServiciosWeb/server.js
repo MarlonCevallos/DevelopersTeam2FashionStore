@@ -9,7 +9,7 @@ var app = express() //app toma la funcion de express
 
 app.use(bodyParser.urlencoded({extended: false})) //deserealizar url
 app.use(bodyParser.json()) //usar en fotmato json
-app.use("/product",endPoints) // http://localhost:3005/product/uri
+app.use("/fashionStore",endPoints) // http://localhost:3005/product/uri
 
 mongoose.connect('mongodb+srv://MarlonTeam2:2022@cluster0.pvig5s9.mongodb.net/FashionStoreDB?retryWrites=true&w=majority',
 {useNewUrlParser: true},
