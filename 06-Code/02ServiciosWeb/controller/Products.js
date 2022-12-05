@@ -1,5 +1,5 @@
 const Product = require("../model/Product") // importamos nuestro modelo
-
+//POST
 const createProduct = (req, res) => {
     let Products = new Product({//objeto
         id: req.body.id,
@@ -18,6 +18,12 @@ const createProduct = (req, res) => {
 
 
 //GET
+const getProducts = (req, res) => {
+    Product.find((err, products) => {
+        err && res.status(500).send(err.message)
+        res.status(200).json(products)
+    })
+}
 
-module.exports = {createProduct}
+
 
