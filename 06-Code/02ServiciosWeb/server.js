@@ -19,5 +19,4 @@ mongoose.connect('mongodb+srv://MarlonTeam2:2022@cluster0.pvig5s9.mongodb.net/Fa
         console.log(`Server is running on port ${portParameter}`)
     })
 }
-
 )
