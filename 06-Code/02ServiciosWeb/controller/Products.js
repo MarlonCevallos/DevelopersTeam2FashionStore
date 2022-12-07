@@ -6,7 +6,8 @@ const createProduct = (req, res) => {
         name: req.body.name,
         description: req.body.description,
         quantity: req.body.quantity,
-        price: req.body.price
+        price: req.body.price,
+        profit: (req.body.profit = (req.body.price * req.body.quantity) * 0.12)
     })
 
     product.save((err, prod) => {
@@ -40,7 +41,8 @@ const updateProfit = (req, res) => {
             name: req.body.name,
             description: req.body.description,
             quantity: req.body.quantity,
-            price: req.body.price
+            price: req.body.price,
+            profit: (req.body.profit = (req.body.price * req.body.quantity) * 0.12)
             }, 
             (err, produ) =>{
             err && res.status(500).json(err.message)
