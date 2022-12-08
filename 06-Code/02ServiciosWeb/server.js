@@ -1,17 +1,17 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const bodyParser = require("body-parser"); //obtener informacion de la consulta
+const bodyParser = require("body-parser");
 
-const portParameter = 3005; // port
+const portParameter = 3002;
 const endPoints = require("./routes/productRoute");
 const cellarEndPoints = require("./routes/cellarRoute");
 
-var app = express(); //app toma la funcion de express
+var app = express();
 
-app.use(bodyParser.urlencoded({ extended: false })); //deserealizar url
-app.use(bodyParser.json()); //usar en fotmato json
-app.use("/fashionStore", endPoints); // http://localhost:3005/product/uri
-app.use("/fashionStore", cellarEndPoints); // http://localhost:3005/cellar/uri
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use("/fashionStore", endPoints);
+app.use("/fashionStore", cellarEndPoints);
 
 mongoose.connect(
   "mongodb+srv://MarlonTeam2:2022@cluster0.pvig5s9.mongodb.net/FashionStoreDB?retryWrites=true&w=majority",

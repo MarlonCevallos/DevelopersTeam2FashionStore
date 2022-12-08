@@ -1,6 +1,5 @@
-const Cellar = require("../model/Cellar"); // we import our model to use it
+const Cellar = require("../model/Cellar");
 
-//POST
 const createCellar = (req, res) => {
   const { id, name_product, quantity, entry_date, exit_date } = req.body;
 
@@ -21,7 +20,6 @@ const createCellar = (req, res) => {
   });
 };
 
-//GET
 const getCellars = (req, res) => {
   Cellar.find((err, cellars) => {
     err && res.status(500).send(err.message);
@@ -29,7 +27,7 @@ const getCellars = (req, res) => {
   });
 };
 
-//GET by ID
+
 const getCellar = (req, res) => {
   Cellar.find({ id: req.params.id }, (err, cellar) => {
     err && res.status(500).send(err.message);
@@ -37,7 +35,7 @@ const getCellar = (req, res) => {
   });
 };
 
-//PUT
+
 const updateCellar = (req, res) => {
   const { id, name_product, quantity, entry_date, exit_date } = req.body;
   const timeInCellar = "" + bussinessRuler(entry_date, exit_date) + " days";
@@ -63,7 +61,7 @@ const updateCellar = (req, res) => {
   }
 };
 
-//DELETE
+
 const deleteCellar = (req, res) => {
   Product.findOneAndDelete({ id: req.params.id }, (err) => {
     err && res.status(500).send(err.message);
@@ -71,7 +69,7 @@ const deleteCellar = (req, res) => {
   });
 };
 
-//BUSSINESS RULER
+
 const bussinessRuler = (entry_day, exit_day) => {
   const _entry_day = new Date(
     getYaer(entry_day),
@@ -102,7 +100,7 @@ const getDay = (date) => {
   return parseInt(date.substring(8, 10));
 };
 
-//EXPORTS
+
 module.exports = {
   createCellar,
   getCellars,

@@ -1,4 +1,4 @@
-const mongoose = require("mongoose"); //communicate with mongodb
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const CellarSchema = new Schema(
