@@ -6,7 +6,6 @@
 ## Proyect: Fashion Store
 ## Members:
 ## -Marlon Cevallos
-## -Michael Gudiño
 ## -Santiago Jaramillo
 ## -Abigail Iza
-
+## -Michael Gudiño
