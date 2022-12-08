@@ -5,8 +5,8 @@
 ## Group Name: Developers Team2
 ## Proyect: Fashion Store
 ## Members:
+## -Santiago Jaramillo
 ## -Marlon Cevallos
 ## -Michael Gudiño
-## -Santiago Jaramillo
 ## -Abigail Iza
 
