@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const portParameter = 3002;
 const endPoints = require("./routes/productRoute");
 const cellarEndPoints = require("./routes/cellarRoute");
+const Api = require('./routes/providerRoute')
 
 var app = express();
 
@@ -12,6 +13,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use("/fashionStore", endPoints);
 app.use("/fashionStore", cellarEndPoints);
+app.use("/fashionStore", Api)
 
 mongoose.connect(
   "mongodb+srv://MarlonTeam2:2022@cluster0.pvig5s9.mongodb.net/FashionStoreDB?retryWrites=true&w=majority",
