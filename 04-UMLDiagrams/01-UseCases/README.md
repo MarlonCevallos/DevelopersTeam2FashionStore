@@ -8,6 +8,6 @@
 ## Members:
 ## -Marlon Cevallos
 ## -Michael Gudiño
-## -Santiago Jaramillo
 ## -Abigail Iza
+## -Santiago Jaramillo
 
