@@ -8,8 +8,6 @@ const CustomersSchema = new Schema(
         lastname: { type: String },
         email: { type: String },
         phone: { type: Number }
-        
-        
     }
 )
 
