@@ -8,6 +8,8 @@ const productSchema = new Schema(
         description: { type: String },
         quantity: { type: Number },
         price: { type: Number },
+        subtotal: { type: Number },
+        total: { type: Number },
         profit: { type: Number }
     }
 )

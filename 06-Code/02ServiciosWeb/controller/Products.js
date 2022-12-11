@@ -7,6 +7,8 @@ const createProduct = (req, res) => {
         description: req.body.description,
         quantity: req.body.quantity,
         price: req.body.price,
+        subtotal: (req.body.subtotal = req.body.price * req.body.quantity),
+        total: (req.body.total = req.body.subtotal + 0.12),
         profit: (req.body.profit = (req.body.price * req.body.quantity) * 0.12)
     })
 
@@ -39,6 +41,8 @@ const updateProfit = (req, res) => {
             description: req.body.description,
             quantity: req.body.quantity,
             price: req.body.price,
+            subtotal: (req.body.subtotal = req.body.price * req.body.quantity),
+            total: (req.body.total = req.body.subtotal + 0.12),
             profit: (req.body.profit = (req.body.price * req.body.quantity) * 0.12)
         },
             (err, produ) => {
