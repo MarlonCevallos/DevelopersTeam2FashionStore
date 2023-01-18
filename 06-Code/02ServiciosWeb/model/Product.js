@@ -11,7 +11,13 @@ const productSchema = new Schema(
         subtotal: { type: Number },
         total: { type: Number },
         profit: { type: Number }
+    },
+    {
+        collection: "products",
+        timestamps: false,
+        versionKey: false,
     }
-)
+);
+
 
 module.exports = Product = mongoose.model('Product', productSchema)
