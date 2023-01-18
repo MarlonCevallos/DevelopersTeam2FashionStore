@@ -6,8 +6,8 @@ const cors = require("cors");
 const portParameter = 3002;
 const endPoints = require("./routes/productRoute");
 const cellarEndPoints = require("./routes/cellarRoute");
-const customerendPoints = require('./routes/customerRoute');
-const Api = require('./routes/providerRoute')
+const customerendPoints = require("./routes/customerRoute");
+const Api = require("./routes/providerRoute");
 
 var app = express();
 
@@ -17,7 +17,7 @@ app.use(cors());
 app.use("/fashionStore", endPoints);
 app.use("/fashionStore", cellarEndPoints);
 app.use("/fashionStore", customerendPoints);
-app.use("/fashionStore", Api)
+app.use("/fashionStore", Api);
 
 mongoose.connect(
   "mongodb+srv://MarlonTeam2:2022@cluster0.pvig5s9.mongodb.net/FashionStoreDB?retryWrites=true&w=majority",
