@@ -11,10 +11,10 @@ const CellarSchema = new Schema(
     timeInCellar: { type: String },
   },
   {
-    collection: "Cellar",
+    collection: "cellars",
     timestamps: false,
     versionKey: false,
   }
 );
 
-module.exports = Product = mongoose.model("Cellar", CellarSchema);
+module.exports = Cellar = mongoose.model("Cellar", CellarSchema);
