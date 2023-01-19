@@ -1,3 +1,5 @@
+/* Author: Steven Jaramillo*/
+
 import { NavLink } from "react-router-dom";
 import NavBarItem from "./NavBarItem";
 

@@ -1,3 +1,5 @@
+/* Author: Steven Jaramillo*/
+
 import logo from "../../assets/logo.jpg";
 import "../../css/home.banner.css";
 

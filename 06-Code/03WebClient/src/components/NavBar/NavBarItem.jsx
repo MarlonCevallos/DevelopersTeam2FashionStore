@@ -1,3 +1,5 @@
+/* Author: Steven Jaramillo*/
+
 import { NavLink } from "react-router-dom";
 
 const NavBatItem = ({ title, option1, option2, href }) => {
