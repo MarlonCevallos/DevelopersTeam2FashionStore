@@ -1,3 +1,5 @@
+/* Author: Marlon Cevallos*/
+
 import React, { useState, useEffect } from "react";
 import { getClientPC } from "../services/axiosPublicApi";
 import CardInfo from "../components/InfoClientePage/CardInfo";

@@ -1,3 +1,5 @@
+/* Author: Marlon Cevallos*/
+
 import ProductItem from "../components/Products/ProductItem";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";

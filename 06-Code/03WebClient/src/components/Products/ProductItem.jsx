@@ -1,3 +1,5 @@
+/* Author: Marlon Cevallos*/
+
 import { useNavigate } from "react-router-dom";
 import { deleteProduct } from "../../services/axiosProducts";
 

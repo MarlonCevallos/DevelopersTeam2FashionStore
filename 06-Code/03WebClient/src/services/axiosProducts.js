@@ -1,3 +1,5 @@
+/* Author: Marlon Cevallos*/
+
 import axios from "axios";
 
 const URI = "http://localhost:3002/fashionStore/product";
