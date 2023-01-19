@@ -1,3 +1,5 @@
+/* Author: Michael Gudiño */
+
 import ProviderItem from "../components/Providers/ProviderItem";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
