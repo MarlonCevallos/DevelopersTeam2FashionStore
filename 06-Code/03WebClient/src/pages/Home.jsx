@@ -1,3 +1,5 @@
+/* Author: Steven Jaramillo*/
+
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Banner from "../components/Home/Banner";
