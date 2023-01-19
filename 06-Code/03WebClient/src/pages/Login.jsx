@@ -1,3 +1,5 @@
+/* Author: Steven Jaramillo*/
+
 import { GoogleLogin } from "react-google-login";
 import { gapi } from "gapi-script";
 import { useEffect } from "react";
