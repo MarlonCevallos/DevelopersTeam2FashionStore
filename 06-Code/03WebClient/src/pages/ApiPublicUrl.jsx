@@ -1,3 +1,5 @@
+/* Author: Carla Iza*/
+
 import UrlTable from "../components/PublicApi/UrlTable";
 import { getArticles } from "../services/axiosPublicApi";
 import { Box } from "@mui/material";
