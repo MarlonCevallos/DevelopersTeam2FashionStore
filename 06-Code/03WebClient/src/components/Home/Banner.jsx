@@ -12,13 +12,10 @@ const Banner = () => {
             BIENVENIDO A FASHION STORE
           </h1>
           <p className="col-12 col-md-6 text-center d-flex align-items-center banner__content-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi ipsum,
-            eum, dignissimos, aperiam vel quam saepe repellendus recusandae
-            consectetur hic ut sapiente iste! Facilis eveniet omnis aspernatur
-            fugiat? Veritatis, doloremque. Lorem ipsum, dolor sit amet
-            consectetur adipisicing elit. Id exercitationem modi corporis animi
-            numquam odit, at neque recusandae doloribus, odio illum perspiciatis
-            eum nam qui quas quaerat! Ducimus, architecto hic!
+            Bienvenidos a nuestra tienda de moda. Somos una tienda fisica y en línea que ofrece una amplia variedad de ropa 
+            y accesorios para hombres y mujeres de todas las edades y estilos. Ofrecemos una selección de las últimas 
+            tendencias de la moda a precios razonables, así como un servicio al cliente excepcional para ayudar a encontrar 
+            lo que busca. ¡Haga una visita a nuestra tienda hoy y descubra cómo podemos ayudar a lucir y sentirse increíble!
           </p>
           <img
             src={logo}
