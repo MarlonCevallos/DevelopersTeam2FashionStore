@@ -1,3 +1,5 @@
+/* Author: Steven Jaramillo*/
+
 import React, { useState, useEffect } from "react";
 import { getArticle } from "../services/axiosPublicApi";
 import Box from "@mui/material/Box";
