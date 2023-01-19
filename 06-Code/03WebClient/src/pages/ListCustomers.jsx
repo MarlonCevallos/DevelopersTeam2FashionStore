@@ -1,3 +1,5 @@
+/* Author: Carla Iza*/
+
 import { useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import CustomerItem from "../components/Customers/CustomerItem";
