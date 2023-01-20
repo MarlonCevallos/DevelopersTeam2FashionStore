@@ -53,7 +53,7 @@ const updateProfit = (req, res) => {
 };
 
 const deleteProduct = (req, res) => {
-    Product.findOneAndDelete({ id: req.body.id }, (err, prod) => {
+    Product.findOneAndDelete({ id: req.params.id }, (err, prod) => {
         err && res.status(500).send(err.message)
         res.status(200).send(prod)
     });
