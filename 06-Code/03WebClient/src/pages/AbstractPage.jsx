@@ -1,4 +1,4 @@
-/* Author: Steven Jaramillo*/
+/* Author: Michael Gudiño*/
 
 import React, { useState, useEffect } from "react";
 import { getArticle } from "../services/axiosPublicApi";
