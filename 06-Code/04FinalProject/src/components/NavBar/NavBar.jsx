@@ -40,6 +40,7 @@ const NavBar = () => {
                 title="PRODUCTOS"
                 option1="Listar Produtos"
                 option2="Añadir Produtos"
+                option3="Reporte de Ventas"
                 href="products"
               />
               <NavBarItem
