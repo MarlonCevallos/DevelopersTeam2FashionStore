@@ -1,0 +1,17 @@
+/* Author: Steven Jaramillo*/
+
+.banner{
+    min-height: 90.8vh;
+    width: 100%;
+    background-color: rgb(250, 194, 194);
+}
+
+.banner__container{
+    height: 100%;
+}
+
+.banner__content-img{
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+}
+

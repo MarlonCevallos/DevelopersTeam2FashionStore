@@ -1,0 +1,19 @@
+.main__container {
+    min-height: 90.8vh;
+    width: 100%;
+    background-color: rgb(255, 239, 239);
+}
+
+.form__container {
+    background-color: rgb(255, 232, 232);
+    border-radius: 10px;
+    padding: 0 20px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2), 0 0 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+.main__img {
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+    max-width: 500px;
+    
+}

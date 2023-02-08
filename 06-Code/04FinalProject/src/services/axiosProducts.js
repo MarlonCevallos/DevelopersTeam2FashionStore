@@ -1,0 +1,41 @@
+/* Author: Marlon Cevallos*/
+
+import axios from "axios";
+const URI = "http://ec2-44-211-70-232.compute-1.amazonaws.com:3002/fashionStore/product";
+
+export const getProducts = async () => {
+  try {
+    const response = await axios.get(URI);
+    console.log(response.data);
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const deleteProduct = async (id) => {
+  try {
+    const response = await axios.delete(`${URI}/${id}`);
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const addProduct = async (product) => {
+  try {
+    const response = await axios.post(URI, product);
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const updateProduct = async (product) => {
+  try {
+    const response = await axios.put(`${URI}/${product.id}`, product);
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
