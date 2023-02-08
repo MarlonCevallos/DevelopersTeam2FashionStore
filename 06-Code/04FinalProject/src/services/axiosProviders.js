@@ -1,7 +1,7 @@
 /* Author: Michael Gudiño */
 
 import axios from "axios";
-const URI = "http://localhost:3002/fashionStore/provider";
+const URI = "http://ec2-52-23-176-81.compute-1.amazonaws.com:3002/fashionStore/provider";
 
 export const getProviders = async () => {
   try {
