@@ -2,7 +2,7 @@
 
 import { NavLink } from "react-router-dom";
 
-const NavBatItem = ({ title, option1, option2, href }) => {
+const NavBatItem = ({ title, option1, option2, option3, href }) => {
   return (
     <li className="nav-item dropdown">
       <NavLink

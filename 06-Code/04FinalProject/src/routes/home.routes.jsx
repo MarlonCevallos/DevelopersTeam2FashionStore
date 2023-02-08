@@ -13,7 +13,6 @@ import NavBar from "../components/NavBar/NavBar";
 import "../css/allPagesStyle.css";
 import ListCellars from "../pages/ListCellars";
 import AddCellar from "../pages/AddCellar";
-import SalesReport from "../pages/SalesReport";
 
 const HomeRoutes = () => {
   return (
@@ -29,7 +28,7 @@ const HomeRoutes = () => {
         <Route path="/customers/add" element={<AddCustomer />} />
         <Route path="/cellars/list" element={<ListCellars />} />
         <Route path="/cellars/add" element={<AddCellar />} />
-        <Route path="/products/list" element={<SalesReport />} />
+        
         <Route path="*" element={<Home />} />
       </Routes>
     </>
