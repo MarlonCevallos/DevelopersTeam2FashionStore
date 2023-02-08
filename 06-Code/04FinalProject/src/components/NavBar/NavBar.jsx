@@ -38,8 +38,8 @@ const NavBar = () => {
               </li>
               <NavBarItem
                 title="PRODUCTOS"
-                option1="Listar Produtos"
-                option2="Añadir Produtos"
+                option1="Listar Productos"
+                option2="Añadir Productos"
                 option3="Reporte de Ventas"
                 href="products"
               />
