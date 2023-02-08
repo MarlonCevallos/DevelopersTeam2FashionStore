@@ -28,6 +28,7 @@ const HomeRoutes = () => {
         <Route path="/customers/add" element={<AddCustomer />} />
         <Route path="/cellars/list" element={<ListCellars />} />
         <Route path="/cellars/add" element={<AddCellar />} />
+        <Route path="/products/report" element={<SalesReport />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </>

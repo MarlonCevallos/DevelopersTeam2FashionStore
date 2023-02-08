@@ -22,7 +22,7 @@ const ListProducts = () => {
 
   return (
     <div className="container mt-4">
-      <h1 className="text-center mt-4">Lista de Productos</h1>
+      <h1 className="text-center mt-4">Reporte de Ventas</h1>
 
       <table className="table table-info mt-4">
         <thead>
