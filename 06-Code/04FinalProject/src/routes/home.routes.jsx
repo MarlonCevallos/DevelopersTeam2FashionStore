@@ -11,6 +11,8 @@ import AddProduct from "../pages/AddProduct";
 import AddProvider from "../pages/AddProvider";
 import NavBar from "../components/NavBar/NavBar";
 import "../css/allPagesStyle.css";
+import ListCellars from "../pages/ListCellars";
+import AddCellar from "../pages/AddCellar";
 
 const HomeRoutes = () => {
   return (
@@ -24,6 +26,8 @@ const HomeRoutes = () => {
         <Route path="/providers/add" element={<AddProvider />} />
         <Route path="/customers/list" element={<ListCustomers />} />
         <Route path="/customers/add" element={<AddCustomer />} />
+        <Route path="/cellars/list" element={<ListCellars />} />
+        <Route path="/cellars/add" element={<AddCellar />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </>
