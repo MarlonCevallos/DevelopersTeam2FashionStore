@@ -33,7 +33,7 @@ const Login = () => {
       <form className={style.form__container}>
         <h1 className={style.form__title}>Inicio Sesión</h1>
         <div className="form__group">
-          <label className={style.form__label}>Email: </label>
+          <label className={style.form__label}>Correo electrónico: </label>
           <input
             type="email"
             className={`form-control ${style.form__input}`}
@@ -41,7 +41,7 @@ const Login = () => {
           />
         </div>
         <div className="form__group">
-          <label className={style.form__label}>Password: </label>
+          <label className={style.form__label}>Contraseña: </label>
           <input
             type="password"
             className={`form-control ${style.form__input}`}
