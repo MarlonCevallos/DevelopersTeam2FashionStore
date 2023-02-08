@@ -49,31 +49,7 @@ const ListProducts = () => {
         <button className="btn btn-success">Agregar</button>
       </NavLink>
 
-      {/**
-       
-<h1 className="text-center mt-4">REPORTE DE VENTAS</h1>
-      <table className="table table-info mt-4">
-        <thead>
-          <tr>
-            <th className="text-center">NÚMERO DE VENTAS</th>
-            <th className="text-center">TOTAL DE VENTAS</th>
-            <th className="text-center">PRODUCTOS VENDIDOS</th>
-            <th className="text-center">TOTAL GANANCIAS</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td className="text-center"></td>
-            <td className="text-center"></td>
-            <td className="text-center"></td>
-            <td className="text-center"></td>
-          </tr>
-        </tbody>
-      </table>
-
-
-       
-       */}
+      {}
     </div>
   );
 };
