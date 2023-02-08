@@ -21,7 +21,7 @@ const NavBatItem = ({ title, option1, option2, href }) => {
         <NavLink className="dropdown-item" to={`/${href}/add`}>
           {option2}
         </NavLink>
-        <NavLink className="dropdown-item" to={`/${href}/report`}>
+        <NavLink className="dropdown-item" to={`/${href}/list`}>
           {option3}
         </NavLink>
       </div>
