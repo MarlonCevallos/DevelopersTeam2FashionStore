@@ -1,6 +1,6 @@
 /* Author: Marlon Cevallos*/
 
-import ProductItem from "../components/Products/ProductItem";
+import ProductItem from "../components/Reports/ReportItem";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getProducts } from "../services/axiosProducts";
@@ -32,7 +32,6 @@ const ListProducts = () => {
             <th className="text-center">PRECIO</th>
             <th className="text-center">CANTIDAD</th>
             <th className="text-center">GANANCIAS</th>
-            <th className="text-center">OPCIONES</th>
           </tr>
         </thead>
         <tbody>
