@@ -91,12 +91,12 @@ function InfoClientPage() {
           />
           <CardInfo
             title="Idioma"
-            img="https://www.pngitem.com/pimgs/m/31-311873_transparent-languages-icon-png-multiple-language-logo-png.png"
+            img="https://i.ibb.co/6PZxKtz/Idioma.jpg"
             info={getIdiom()}
           />
           <CardInfo
             title="Host Remoto"
-            img="https://w7.pngwing.com/pngs/274/520/png-transparent-virtual-private-network-computer-network-cisco-systems-vpn-client-remote-desktop-software-services-miscellaneous-blue-computer-network-thumbnail.png"
+            img="https://i.ibb.co/kKDPJZX/web.jpg"
             info={host}
           />
           <CardInfo
