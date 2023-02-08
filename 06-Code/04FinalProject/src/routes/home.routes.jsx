@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 
 import Home from "../pages/Home";
 import ListProducts from "../pages/ListProducts";
+import ReportProducts from "../pages/Reports";
 import ListProviders from "../pages/ListProviders";
 import ListCustomers from "../pages/ListCustomers";
 import AddCustomer from "../pages/AddCustomer";
@@ -20,6 +21,7 @@ const HomeRoutes = () => {
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/products/list" element={<ReportProducts />} />
         <Route path="/products/list" element={<ListProducts />} />
         <Route path="/products/add" element={<AddProduct />} />
         <Route path="/providers/list" element={<ListProviders />} />
@@ -28,7 +30,6 @@ const HomeRoutes = () => {
         <Route path="/customers/add" element={<AddCustomer />} />
         <Route path="/cellars/list" element={<ListCellars />} />
         <Route path="/cellars/add" element={<AddCellar />} />
-        
         <Route path="*" element={<Home />} />
       </Routes>
     </>
