@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 
 import Home from "../pages/Home";
 import ListProducts from "../pages/ListProducts";
+import ReportProducts from "../pages/Reports";
 import ListProviders from "../pages/ListProviders";
 import ListCustomers from "../pages/ListCustomers";
 import AddCustomer from "../pages/AddCustomer";
@@ -13,7 +14,6 @@ import NavBar from "../components/NavBar/NavBar";
 import "../css/allPagesStyle.css";
 import ListCellars from "../pages/ListCellars";
 import AddCellar from "../pages/AddCellar";
-import SalesReport from "../pages/SalesReport";
 
 const HomeRoutes = () => {
   return (
@@ -21,6 +21,7 @@ const HomeRoutes = () => {
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/products/report" element={<ReportProducts />} />
         <Route path="/products/list" element={<ListProducts />} />
         <Route path="/products/add" element={<AddProduct />} />
         <Route path="/providers/list" element={<ListProviders />} />
@@ -29,7 +30,6 @@ const HomeRoutes = () => {
         <Route path="/customers/add" element={<AddCustomer />} />
         <Route path="/cellars/list" element={<ListCellars />} />
         <Route path="/cellars/add" element={<AddCellar />} />
-        <Route path="/products/list" element={<SalesReport />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </>

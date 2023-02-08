@@ -2,7 +2,7 @@
 
 import { NavLink } from "react-router-dom";
 
-const NavBatItem = ({ title, option1, option2, href }) => {
+const NavBatItem = ({ title, option1, option2, option3, href }) => {
   return (
     <li className="nav-item dropdown">
       <NavLink
@@ -21,7 +21,7 @@ const NavBatItem = ({ title, option1, option2, href }) => {
         <NavLink className="dropdown-item" to={`/${href}/add`}>
           {option2}
         </NavLink>
-        <NavLink className="dropdown-item" to={`/${href}/list`}>
+        <NavLink className="dropdown-item" to={`/${href}/report`}>
           {option3}
         </NavLink>
       </div>
