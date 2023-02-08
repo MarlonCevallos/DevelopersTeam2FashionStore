@@ -16,7 +16,7 @@ const NavBar = () => {
       <nav className="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
         <div className="container">
           <NavLink className="navbar-brand" to="/">
-            fS 
+            fS
           </NavLink>
           <button
             className="navbar-toggler d-lg-none"
@@ -53,6 +53,12 @@ const NavBar = () => {
                 option1="Listar Clientes"
                 option2="Añadir Clientes"
                 href="customers"
+              />
+              <NavBarItem
+                title="INVENTARIO"
+                option1="Listar Inventario"
+                option2="Añadir Producto al Inventario"
+                href="cellars"
               />
               <li className="nav-item">
                 <NavLink
