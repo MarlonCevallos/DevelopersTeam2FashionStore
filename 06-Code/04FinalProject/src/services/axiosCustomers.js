@@ -2,7 +2,7 @@
 
 
 import axios from "axios";
-const URI = "http://localhost:5173:3002/fashionStore/customer";
+const URI = "http://localhost:3002/fashionStore/customer";
 
 export const getCustomers = async () => {
   try {

@@ -1,7 +1,7 @@
 /* Author: Marlon Cevallos*/
 
 import axios from "axios";
-const URI = "http://localhost:5173:3002/fashionStore/product";
+const URI = "http://localhost:3002/fashionStore/product";
 
 export const getProducts = async () => {
   try {

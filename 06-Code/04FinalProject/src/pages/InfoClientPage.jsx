@@ -86,7 +86,7 @@ function InfoClientPage() {
         >
           <CardInfo
             title="Archivos Aceptados"
-            img="https://acf.geeknetic.es/imgri/imagenes/tutoriales/91-archivos-extensiones-programas-muestra.jpg"
+            img="https://i.ibb.co/XL5wnd3/Png-Item-312785.png"
             info={filesAccepted}
           />
           <CardInfo
