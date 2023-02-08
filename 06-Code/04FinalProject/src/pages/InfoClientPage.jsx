@@ -95,23 +95,23 @@ function InfoClientPage() {
             info={getIdiom()}
           />
           <CardInfo
-            title="Host Remoto"
+            title="Host"
             img="https://i.ibb.co/kKDPJZX/web.jpg"
             info={host}
           />
           <CardInfo
             title="IP de Origen"
-            img="https://cdn-icons-png.flaticon.com/512/6159/6159318.png"
+            img="https://i.ibb.co/qy6g8sv/Ip.jpg"
             info={ipOrigin}
           />
           <CardInfo
             title="Navegador"
-            img="https://i.pinimg.com/736x/30/73/e9/3073e975487f26a46049161cb6f6ce5c.jpg"
+            img="https://i.ibb.co/SvZfwrz/browser.jpg"
             info={browser[5]}
           />
           <CardInfo
             title="Sistema Operativo"
-            img="https://cdn-icons-png.flaticon.com/512/2172/2172832.png"
+            img="https://i.ibb.co/kGd8wqb/SO.png"
             info={oprativeSystem[1]}
           />
         </Box>
