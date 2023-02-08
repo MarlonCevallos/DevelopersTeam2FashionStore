@@ -70,7 +70,7 @@ function InfoClientPage() {
         }}
       >
         <Typography variant="h4">
-          Información del compuatos del Cliente
+          Información del computador del usuario
         </Typography>
 
         <Box
