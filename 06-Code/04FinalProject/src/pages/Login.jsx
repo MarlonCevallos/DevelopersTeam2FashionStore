@@ -31,7 +31,7 @@ const Login = () => {
   return (
     <main className={style.container__login}>
       <form className={style.form__container}>
-        <h1 className={style.form__title}>Inicio Sesión</h1>
+        <h1 className={style.form__title}>Iniciar Sesión</h1>
         <div className="form__group">
           <label className={style.form__label}>Correo electrónico: </label>
           <input
