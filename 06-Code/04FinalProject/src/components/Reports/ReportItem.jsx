@@ -8,6 +8,7 @@ const ProductItem = ({ product, getProducts }) => {
       <td className="text-center">{product.description}</td>
       <td className="text-center">{product.price}</td>
       <td className="text-center">{product.quantity}</td>
+      <td className="text-center">{product.profit}</td>
       <td className="text-center">{product.total}</td>
     </tr>
   );

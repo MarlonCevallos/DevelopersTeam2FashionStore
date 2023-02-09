@@ -31,7 +31,8 @@ const ListProducts = () => {
             <th className="text-center">DESCRIPCIÓN</th>
             <th className="text-center">PRECIO</th>
             <th className="text-center">CANTIDAD</th>
-            <th className="text-center">GANANCIAS</th>
+            <th className="text-center">IVA</th>
+            <th className="text-center">TOTAL</th>
           </tr>
         </thead>
         <tbody>
